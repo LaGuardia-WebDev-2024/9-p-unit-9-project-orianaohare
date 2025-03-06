@@ -41,5 +41,12 @@ var drawScene = function(){
    text(sceneText, 10, 375);
 };
 
+//draw function- Runs On Repeat
+draw= fuction(){
+if(mousepressed){
+text("your fate awaits", random (0,600), random (0,400))
+}
+
+};
 
 
