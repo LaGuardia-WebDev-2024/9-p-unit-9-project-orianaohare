@@ -4,6 +4,7 @@ setup = function() {
 
 var answer = 1;
 
+
 draw = function(){
   background(100,100,100);
   fill(0, 0, 0);
@@ -12,6 +13,7 @@ draw = function(){
   triangle(200, 104, 280, 280, 120, 280);
   fill(255, 255, 255);
   
+  drawFish(200, 300, color(200,0,0));
   if (answer == 1) {
     
     text("YES", 185, 219); 
@@ -48,10 +50,36 @@ draw = function(){
   text("100%", 165, 229); 
   
   }
+  
+  if(mousePressed){
+text("your fate awaits", random (0,200), random (0,400))
+}
+if(keyPressed){
+if(key == 'a'){drawFish(300,200)}
+
+
 };
+
+  
+};
+
+
 
 mouseClicked = function(){
   answer = round(random(1, 8));
+};
+
+
+var drawFish = function(fishX, fishY, fishColor){
+  fill(fishColor);
+  strokeWeight(1);
+  stroke(0,0,0);
+  ellipse(fishX+20,fishY,13,25); //tail
+  ellipse(fishX,fishY,40,20); //body
+  fill(0,0,0);
+  ellipse(fishX-10,fishY-2, 3 ,5); //eye
+  fill(226, 90, 76 );
+  ellipse(fishX-12,fishY+4,10,3); //mouth
 };
 
 
